@@ -45,6 +45,8 @@ Console.WriteLine($"Сумма цифр в числе N = {SumNumber(n)}");
 
 // Задача 29: Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
 
+
+
 /*
 int[] CreateArray(int size)
 {
@@ -57,15 +59,17 @@ int[] CreateArray(int size)
 
 void ShowArray(int[] array)
 {
-    Console.Write("Array is: ");
+    Console.Write("Массив: ");
     for(int i = 0; i < array.Length; i++)
         Console.Write(array[i] + " ");
 
     Console.WriteLine(" \n");
 }
 
-Console.Write("Input a number of elements: ");
+Console.Write("Ведите количество элементов: ");
 int n = Convert.ToInt32(Console.ReadLine());
 int[]myArray = CreateArray(n);
 ShowArray(myArray);
 */
+
+
