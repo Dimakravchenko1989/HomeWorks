@@ -66,3 +66,84 @@ Console.Write("Введите любое число: ");
 int res = Convert.ToInt32(Console.ReadLine());
 Cube(res);
 */
+/*
+Console.WriteLine("Введите число N ");
+int N= int.Parse(Console.ReadLine());
+int SumNumber()
+{
+    int count=Convert.ToString(N).Length;
+    int result = 0;
+    
+for (int i=0; i<count; i++)
+{
+    count = N-N%10;
+    result=result + (N-count);
+    N=N/10;
+}
+return result; 
+}
+int sumN=SumNumber();
+Console.WriteLine(sumN);
+*/
+
+
+/*Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+3, 5 -> 243 (3⁵)
+2, 4 -> 16*/
+
+// Console.WriteLine("Введите число А ");
+// int A = int.Parse(Console.ReadLine());
+// Console.WriteLine("Введите число B ");
+// int B = int.Parse(Console.ReadLine());
+// int Exponentiation()
+// {
+//     int result=1;
+//     for (int i=1; i<=B; i++)
+//     {
+//         result=result*A;
+//     }
+//     return result;
+
+// }
+// int exp=Exponentiation();
+// Console.WriteLine("Возведение числа А в степень В = " + exp);
+
+
+/*Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+Напишите программу, которая покажет количество чётных чисел в массиве.
+[345, 897, 568, 234] -> 2*/
+
+Console.Clear();
+int[] numbers = new int[10];
+void FillArray(int[]array, int min, int max)
+{
+    for (int i=0; i<array.Length; i++)
+    {
+        array[i]= new Random().Next(min,max);
+    }
+}
+void WriteArray(int[] array)
+{
+    for (int i=0; i<array.Length; i++)
+    {
+    Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
+int QuantityPositive(int[]array)
+{
+int quantity= 0;
+    for (int i=0; i< array.Length; i++ )
+{
+    if (array[i]%2==0)
+    {
+        quantity++;
+    }
+}
+return quantity;
+}
+FillArray(numbers,100,1000);
+WriteArray(numbers);
+// Console.WriteLine();
+int quantity = QuantityPositive(numbers);
+Console.WriteLine($"Количество чётных чисел в массиве: {quantity} ");
