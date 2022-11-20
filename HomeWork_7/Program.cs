@@ -157,7 +157,7 @@ void Show2dArray(int[,] array)
 void ShowArrayDouble(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
-        Console.Write(array[i] + " ");
+        Console.Write(array[i] + "; ");
 
     Console.WriteLine();
 }
@@ -176,7 +176,7 @@ double[] ArithmeticMean(int[,] array)
 
         arrayArithmetic[i] /= row;
         arrayArithmetic[i] = Math.Round(arrayArithmetic[i], 1);
-        Console.Write(arrayArithmetic[i] + "; ");
+        
     }
 
     return arrayArithmetic;
@@ -185,7 +185,7 @@ Console.Write("Введите количество строк: ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов: ");
 int n = Convert.ToInt32(Console.ReadLine());
-Console.Write("введите минимальное значение: ");
+Console.Write("Введите минимальное значение: ");
 int min = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите максимальное значение: ");
 int max = Convert.ToInt32(Console.ReadLine());
@@ -195,4 +195,4 @@ Show2dArray(myArray);
 double[] newArray = ArithmeticMean(myArray);
 ShowArrayDouble(newArray);
 
- */
+*/
